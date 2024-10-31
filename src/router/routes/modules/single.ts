@@ -1,26 +1,26 @@
 import type { AppRouteModule } from '/@/router/types';
 
 import { LAYOUT } from '/@/router/constant';
-import { t } from '/@/hooks/web/useI18n';
+// import { t } from '/@/hooks/web/useI18n';
 
 const dashboard: AppRouteModule = {
-  path: '/about',
-  name: 'About',
+  path: '/single',
+  name: 'Single',
   component: LAYOUT,
-  redirect: '/about/index',
+  redirect: '/single/index',
   meta: {
-    hideChildrenInMenu: true,
+    hideChildrenInMenu: true, // false 就会渲染二级菜单
     icon: 'simple-icons:about-dot-me',
-    title: t('routes.dashboard.about'),
-    orderNo: 100000,
+    title: '单页模块',
+    orderNo: 1,
   },
   children: [
     {
       path: 'index',
-      name: 'AboutPage',
-      component: () => import('/@/views/sys/about/index.vue'),
+      name: 'SinglePage',
+      component: () => import('/@/views/single/index.vue'),
       meta: {
-        title: t('routes.dashboard.about'),
+        title: '单页模块的页面',
         icon: 'simple-icons:about-dot-me',
         hideMenu: true,
       },

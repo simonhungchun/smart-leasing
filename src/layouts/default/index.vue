@@ -4,7 +4,7 @@
     <LayoutHeader fixed v-if="getShowFullHeaderRef" />
     <Layout :class="[layoutClass]">
       <LayoutSideBar v-if="getShowSidebar || getIsMobile" />
-      <Layout :class="`${prefixCls}-main`">
+      <Layout :class="`${prefixCls}-main`" style="background-color: #1988f9">
         <LayoutMultipleHeader />
         <LayoutContent />
         <LayoutFooter />
