@@ -23,3 +23,4 @@ npm run bootstrap 安装项目以来 npm run serve => npm run dev npm run build 
 
 1. 在根目录下的 mock 目录中 新建一个 ts 文件（文件名没有要求只求语意化）
 2. 默认导出一个数组 数组里的每一个成员对象就是一个 api 接口
+3. 默认导出一个数组 数组里的每一个成员对象就是一个 api 接口
