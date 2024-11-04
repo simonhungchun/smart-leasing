@@ -1,10 +1,10 @@
 <template>
   <Layout :class="prefixCls" v-bind="lockEvents">
     <LayoutFeatures />
-    <LayoutHeader fixed v-if="getShowFullHeaderRef" />
+    <LayoutHeader v-if="getShowFullHeaderRef" fixed />
     <Layout :class="[layoutClass]">
       <LayoutSideBar v-if="getShowSidebar || getIsMobile" />
-      <Layout :class="`${prefixCls}-main`" style="background-color: #1988f9">
+      <Layout :class="`${prefixCls}-main`">
         <LayoutMultipleHeader />
         <LayoutContent />
         <LayoutFooter />
@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent, computed, unref } from 'vue';
+  import { computed, defineComponent, unref } from 'vue';
   import { Layout } from 'ant-design-vue';
   import { createAsyncComponent } from '/@/utils/factory/createAsyncComponent';
 
